@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google font ka link -->
+    <link rel="stylesheet" href="taskbar.css"> <!-- Apne custom CSS file ko link kiya hai -->
+    <link rel="shortcut icon" href="file:///C:/Users/Acer/Downloads/icons8-task-management-96.png" type="image/x-icon"> <!-- Favicon ko set kiya hai -->
+</head>
+<body>
+    <div class="container"> <!-- Saara content ek container mein rakha gaya hai -->
+        <header>
+            <h1>Task Manager</h1> <!-- Heading, yeh task manager ka title hai -->
+            <button id="theme-toggle"></button> <!-- Theme toggle button -->
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>Menu</h2> <!-- Sidebar mein menu -->
+                <ul>
+                    <li><a href="#" id="all-tasks">All Tasks</a></li> <!-- All tasks ka link -->
+                    <li><a href="#" id="completed-tasks">Completed Tasks</a></li> <!-- Completed tasks ka link -->
+                    <li><a href="#" id="high-priority">High Priority</a></li> <!-- High priority tasks ka link -->
+                    <li><a href="#" id="medium-priority">Medium Priority</a></li> <!-- Medium priority tasks ka link -->
+                    <li><a href="#" id="low-priority">Low Priority</a></li> <!-- Low priority tasks ka link -->
+                    <li><a href="#" id="deleted-tasks">Deleted Tasks</a></li> <!-- Deleted tasks ka link -->
+                </ul>
+            </aside>
+
+            <main>
+                <div class="task-form-container">
+                    <h2>Add New Task</h2> <!-- New task add karne ka form -->
+                    <form id="task-form"> <!-- Form start -->
+                        <div class="form-group">
+                            <label for="task-title">Task Title</label> <!-- Task ka title enter karne ke liye label -->
+                            <input type="text" id="task-title" placeholder="Enter task title" required> <!-- Task title input field -->
+                        </div>
+                        <div class="form-group">
+                            <label for="task-description">Task Description</label> <!-- Task ka description enter karne ke liye label -->
+                            <textarea id="task-description" placeholder="Enter task description"></textarea> <!-- Task description input field -->
+                        </div>
+                        <div class="form-group">
+                            <label for="task-due-date">Due Date</label> <!-- Task ka due date enter karne ke liye label -->
+                            <input type="date" id="task-due-date" required> <!-- Due date input field -->
+                        </div>
+                        <div class="form-group">
+                            <label for="task-priority">Priority</label> <!-- Task priority choose karne ke liye label -->
+                            <select id="task-priority"> <!-- Priority dropdown menu -->
+                                <option value="low">Low Priority</option> <!-- Low priority option -->
+                                <option value="medium">Medium Priority</option> <!-- Medium priority option -->
+                                <option value="high">High Priority</option> <!-- High priority option -->
+                            </select>
+                        </div>
+                        <button type="submit">Add Task</button> <!-- Form submit karne ka button -->
+                    </form>
+
+                </div>
+
+                <h2>Task List</h2> <!-- Task list ka heading -->
+                <ul id="task-list"></ul> <!-- Task list ko display karne ke liye empty list -->
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; Faizan Ali. All rights reserved.</p> <!-- Footer mein copyright information -->
+        </footer>
+    </div>
+
+    <script src="taskbar.js"></script> <!-- JavaScript file ko link kiya gaya hai -->
+</body>
+</html>

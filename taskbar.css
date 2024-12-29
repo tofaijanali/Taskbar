@@ -1,0 +1,274 @@
+/* General Reset */
+* {
+    margin: 0; /* Har element ka margin zero set kar rahe hain */
+    padding: 0; /* Har element ka padding zero set kar rahe hain */
+    box-sizing: border-box; /* Box model ko border-box set kar rahe hain */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Font family ko Roboto set kiya */
+    background-color: #fff; /* White background color */
+    color: #333; /* Text ka color dark grey */
+    line-height: 1.6; /* Line height ko 1.6 set kiya */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition ke liye */
+}
+
+.container {
+    max-width: 1200px; /* Container ki max width 1200px */
+    margin: 20px auto; /* Container ko center me rakhne ke liye margin set kiya */
+    padding: 20px; /* Padding diya */
+    background: #fff; /* White background */
+    border-radius: 10px; /* Border ko round kiya */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect diya */
+    transition: background-color 0.3s; /* Background color change hone par smooth transition */
+}
+
+header {
+    display: flex; /* Flexbox use kiya */
+    justify-content: space-between; /* Items ko space ke saath arrange kiya */
+    align-items: center; /* Items ko vertically center kiya */
+    background: linear-gradient(90deg, #0097A7, #006F74); /* Teal se dark teal gradient background */
+    color: #fff; /* Text ka color white */
+    padding: 15px 20px; /* Padding diya */
+    border-radius: 10px; /* Border radius set kiya */
+}
+
+header h1 {
+    font-size: 2rem; /* Heading ka font size 2rem set kiya */
+}
+
+header #theme-toggle {
+    background-color: #fff; /* Theme toggle button ka background white */
+    color: #0097A7; /* Text color teal */
+    border: none; /* Border ko none kiya */
+    padding: 10px 20px; /* Padding set ki */
+    border-radius: 5px; /* Border ko round kiya */
+    cursor: pointer; /* Pointer cursor diya */
+    font-weight: bold; /* Font weight bold kiya */
+    transition: background-color 0.3s, color 0.3s; /* Transition effect */
+}
+
+header #theme-toggle:hover {
+    background-color: #0097A7; /* Hover hone par background teal */
+    color: #fff; /* Hover par text color white */
+}
+
+.main-content {
+    display: flex; /* Flexbox layout */
+    margin-top: 20px; /* Top margin diya */
+}
+
+.sidebar {
+    width: 250px; /* Sidebar ki width 250px set ki */
+    background-color: #f8f9fa; /* Light grey background color */
+    padding: 20px; /* Padding diya */
+    border-radius: 10px; /* Border ko round kiya */
+    margin-right: 20px; /* Right margin diya */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow diya */
+}
+
+.sidebar h2 {
+    font-size: 1.5rem; /* Sidebar header ka font size 1.5rem set kiya */
+    margin-bottom: 15px; /* Bottom margin diya */
+}
+
+.sidebar ul {
+    list-style: none; /* List style ko none kiya */
+}
+
+.sidebar li {
+    margin: 10px 0; /* List items ke beech margin diya */
+}
+
+.sidebar a {
+    text-decoration: none; /* Links par underline hataya */
+    color: #0097A7; /* Link color teal diya */
+    font-weight: bold; /* Font ko bold kiya */
+    transition: color 0.3s; /* Transition effect diya */
+}
+
+.sidebar a:hover {
+    color: #006F74; /* Hover par color dark teal ho jayega */
+}
+
+main {
+    flex: 1; /* Main content ko remaining space milega */
+}
+
+.task-form-container {
+    margin-bottom: 20px; /* Bottom margin diya */
+    background: #f1f1f1; /* Light grey background */
+    padding: 20px; /* Padding diya */
+    border-radius: 10px; /* Border ko round kiya */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow diya */
+}
+
+.task-form-container h2 {
+    font-size: 1.5rem; /* Task form ka header ka font size 1.5rem set kiya */
+    margin-bottom: 15px; /* Bottom margin diya */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Form groups ke beech margin diya */
+}
+
+label {
+    display: block; /* Labels ko block level elements banaya */
+    font-weight: bold; /* Label ko bold kiya */
+    margin-bottom: 5px; /* Bottom margin diya */
+}
+
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%; /* Inputs ko full width diya */
+    padding: 10px; /* Padding diya */
+    border: 1px solid #ccc; /* Border light grey diya */
+    border-radius: 5px; /* Border ko round kiya */
+    transition: border-color 0.3s; /* Border color change hone par transition */
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0097A7; /* Focus hone par border color teal ho jayega */
+}
+
+button {
+    background: linear-gradient(90deg, #006F74, #0097A7); /* Button ke liye gradient background */
+    color: #fff; /* Button text ka color white */
+    border: none; /* Border ko none kiya */
+    padding: 10px 15px; /* Padding set ki */
+    border-radius: 5px; /* Border ko round kiya */
+    cursor: pointer; /* Pointer cursor diya */
+    font-weight: bold; /* Font ko bold kiya */
+    transition: 0.3s; /* Transition effect diya */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0097A7, #006F74); /* Hover hone par gradient reverse ho jayega */
+}
+
+#search-bar {
+    width: 100%; /* Search bar ko full width diya */
+    padding: 10px; /* Padding diya */
+    border: 1px solid #ccc; /* Border light grey diya */
+    border-radius: 5px; /* Border ko round kiya */
+    margin-top: 15px; /* Top margin diya */
+    margin-bottom: 15px; /* Bottom margin diya */
+}
+
+ul#task-list {
+    list-style: none; /* List style ko none kiya */
+    padding: 0; /* Padding ko zero kiya */
+}
+
+ul#task-list li {
+    padding: 15px; /* Task items ko padding diya */
+    border: 1px solid #ddd; /* Border light grey diya */
+    border-radius: 5px; /* Border ko round kiya */
+    margin-bottom: 10px; /* Bottom margin diya */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Items ko space ke saath arrange kiya */
+    align-items: center; /* Items ko vertically center kiya */
+    background-color: #f9f9f9; /* Light background color */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hover effect diya */
+}
+
+ul#task-list li:hover {
+    transform: scale(1.02); /* Hover par item thoda zoom hoga */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Hover par shadow effect diya */
+}
+
+ul#task-list .high {
+    border-left: 5px solid #FF4D4D; /* High priority task ko red border diya */
+}
+
+ul#task-list .medium {
+    border-left: 5px solid #FFC107; /* Medium priority task ko amber border diya */
+}
+
+ul#task-list .low {
+    border-left: 5px solid #28A745; /* Low priority task ko green border diya */
+}
+
+footer {
+    text-align: center; /* Footer ko center me align kiya */
+    margin-top: 20px; /* Top margin diya */
+    padding: 10px; /* Padding diya */
+    background: #006F74; /* Dark teal background */
+    color: #fff; /* Text color white */
+    border-radius: 10px; /* Border ko round kiya */
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+}
+
+body.dark .container {
+    background-color: #444; /* Darker container background */
+}
+
+body.dark .sidebar {
+    background-color: #555; /* Darker sidebar */
+}
+
+body.dark header {
+    background-color: #444; /* Dark header background */
+    color: #fff; /* White text color */
+}
+
+body.dark footer {
+    background-color: #444; /* Dark footer background */
+    color: #fff; /* White text color */
+}
+
+body.dark button {
+    background-color: #006F74; /* Dark teal button background */
+    color: #fff; /* White text color */
+}
+
+body.dark button:hover {
+    background-color: #004C50; /* Darker teal on hover */
+}
+
+body.dark .sidebar a {
+    color: #fff; /* White text color for links */
+}
+
+body.dark .sidebar a:hover {
+    color: #0097A7; /* Lighter teal on hover */
+}
+
+body.dark .sidebar a.active {
+    background-color: #0097A7; /* Active link ko teal background diya */
+    color: #fff; /* White text color for active link */
+}
+
+body.dark .task-form-container,
+body.dark ul#task-list li {
+    background-color: #333; /* Dark gray background for task container */
+    color: #fff; /* White text color */
+}
+
+body.dark .task-form-container h2,
+body.dark ul#task-list li h3,
+body.dark ul#task-list li p,
+body.dark ul#task-list li small {
+    color: #fff; /* White text for task titles and description */
+}
+
+body.dark #search-bar {
+    background-color: #444; /* Dark background for search bar */
+    color: #fff; /* White text for search bar */
+    border: 1px solid #555; /* Darker border for search bar */
+}
+
+body.dark .form-group label {
+    color: #fff; /* White labels in dark mode */
+}
+
+body.dark footer {
+    text-align: center; /* Footer ko center me align kiya */
+    padding: 10px; /* Padding diya */
+    background-color: #006F74; /* Dark teal background */
+    color: #fff; /* White text color */
+}
